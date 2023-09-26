@@ -3,8 +3,8 @@ Advanced Java Programming Class
 
 In this repo-
 
-Assignments
-Practice code
-Code from notes
-Projects
+-Assignments
+-Practice code
+-Code from notes
+-Projects
 
