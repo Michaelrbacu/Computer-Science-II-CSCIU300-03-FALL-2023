@@ -29,28 +29,24 @@ public Square(int size)
 //--------------------------------------
 public int sumRow(int row)
 {
-    return int;
 }
 //--------------------------------------
 //return the sum of the values in the given column
 //--------------------------------------
 public int sumCol(int col)
 {
-    return int;
 }
 //--------------------------------------
 //return the sum of the values in the main diagonal
 //--------------------------------------
 public int sumMainDiag()
 {
-    return int;
 }
 //--------------------------------------
 //return the sum of the values in the other ("reverse") diagonal
 //--------------------------------------
 public int sumOtherDiag()
 {
-    return int;
 }
 //--------------------------------------
 //return true if the square is magic (all rows, cols, and diags have
@@ -58,7 +54,6 @@ public int sumOtherDiag()
 //--------------------------------------
 public boolean magic()
 {
-    return boolean;
 }
 //--------------------------------------
 //read info into the square from the input stream associated with the
