@@ -1,40 +1,33 @@
-// ***************************************************************
-// SquareTest.java
-//
-// Uses the Square class to read in square data and tell if
-// each square is magic.
-//
-// ***************************************************************
+import java.io.File;
+import java.io.IOException;
 import java.util.Scanner;
-public class SquareTest
-{
-public static void main(String[] args) throws IOException
-{
-Scanner scan = new Scanner(new File("magicData"));
-int count = 1; //count which square we're on
-int size = scan.nextInt(); //size of next square
-//Expecting -1 at bottom of input file
-while (size != -1)
-{
-//create a new Square of the given size
-//call its read method to read the values of the square
-System.out.println("\n******** Square " + count + " ********");
-//print the square
-//print the sums of its rows
-//print the sums of its columns
-//print the sum of the main diagonal
-//print the sum of the other diagonal
-//determine and print whether it is a magic square
-//get size of next square
-size = scan.nextInt();
+
+public class SquareTest {
+    public static void main(String[] args) throws IOException {
+        Scanner scan = new Scanner(new File("magicData"));
+        int count = 1; // Count which square we're on
+        int size = scan.nextInt();
+
+        // Expecting -1 at the bottom of the input file
+        while (size != -1) {
+            System.out.println("\n******** Square " + count + " ********");
+
+            // Create a new square of the given size
+            Square square = new Square(size);
+
+            // Read the square data into the square
+            square.readSquare(scan);
+
+            // Check if the square is magic and print the result
+            if (square.magic()) {
+                System.out.println("Magic Square!");
+            } else {
+                System.out.println("Not a Magic Square.");
+            }
+
+            // Increment the square count and read the next size
+            count++;
+            size = scan.nextInt();
+        }
+    }
 }
-}
-}
-
-
-
-//magicData file is attached.
-//In chapter05, there is an example about how to read from a file.
-
-
-
