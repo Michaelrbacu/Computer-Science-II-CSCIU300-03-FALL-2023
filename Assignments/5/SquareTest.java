@@ -18,11 +18,15 @@ public class SquareTest {
             // Read the square data into the square
             square.readSquare(scan);
 
+
             // Check if the square is magic and print the result
             if (square.magic()) {
                 System.out.println("Magic Square!");
+                square.printSquare();
+
             } else {
                 System.out.println("Not a Magic Square.");
+                square.printSquare();
             }
 
             // Increment the square count and read the next size
