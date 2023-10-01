@@ -18,15 +18,33 @@ public class SquareTest {
             // Read the square data into the square
             square.readSquare(scan);
 
+            square.printSquare();
+
+            // Calculate and print the sum of each row
+            for (int row = 0; row < size; row++) {
+                int rowSum = square.sumRow(row);
+                System.out.println("Sum of Row " + (row + 1) + ": " + rowSum);
+            }
+
+            // Calculate and print the sum of each column
+            for (int col = 0; col < size; col++) {
+                int colSum = square.sumCol(col);
+                System.out.println("Sum of Column " + (col + 1) + ": " + colSum);
+            }
+
+            // Calculate and print the sum of the main diagonal
+            int mainDiagSum = square.sumMainDiag();
+            System.out.println("Sum of Main Diagonal: " + mainDiagSum);
+
+            // Calculate and print the sum of the other ("reverse") diagonal
+            int otherDiagSum = square.sumOtherDiag();
+            System.out.println("Sum of Other Diagonal: " + otherDiagSum);
 
             // Check if the square is magic and print the result
             if (square.magic()) {
                 System.out.println("Magic Square!");
-                square.printSquare();
-
             } else {
                 System.out.println("Not a Magic Square.");
-                square.printSquare();
             }
 
             // Increment the square count and read the next size
