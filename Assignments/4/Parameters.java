@@ -3,7 +3,7 @@
 //
 // Illustrates the concept of a variable parameter list.
 //*******************************************************
-import java.util.Scanner;
+
 public class Parameters
 {
     //-----------------------------------------------
