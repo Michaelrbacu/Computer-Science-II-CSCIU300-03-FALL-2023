@@ -19,9 +19,11 @@ public class Question
     //-----------------------------------------------------------------
     public Question(String query, String result)
     {
+        
         question = query;
         answer = result;
         complexityLevel = 1;
+
     }
 
     //-----------------------------------------------------------------
