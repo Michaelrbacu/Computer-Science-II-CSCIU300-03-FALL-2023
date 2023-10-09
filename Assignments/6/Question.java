@@ -19,11 +19,11 @@ public class Question
     //-----------------------------------------------------------------
     public Question(String query, String result)
     {
-        
+
         question = query;
         answer = result;
         complexityLevel = 1;
-
+        
     }
 
     //-----------------------------------------------------------------
@@ -34,7 +34,7 @@ public class Question
         complexityLevel = level;
     }
 
-        @Override
+    @Override
     public boolean equals(Object obj)
     {
         if (this == obj)
@@ -45,13 +45,19 @@ public class Question
         return question.equals(other.question) && complexityLevel == other.complexityLevel;
     }
 
+    
     //-----------------------------------------------------------------
     //  Returns the complexity level for this question.
     //-----------------------------------------------------------------
+    
     public int getComplexity()
     {
         return complexityLevel;
     }
+
+
+    
+
 
     //-----------------------------------------------------------------
     //  Returns the question.
