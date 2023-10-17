@@ -1,8 +1,9 @@
 package Practice.Inheritance;
 
-public class prac extends Example {
+public class Prac extends Example {
 
-    public prac(int ok, int bro) {
-        super(ok, bro);  
+    public Prac(int ok, int bro) {
+        super(ok, bro); 
+        System.out.println(ok+bro); 
     }
 }

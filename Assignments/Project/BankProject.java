@@ -5,7 +5,8 @@ import java.util.Scanner;
 
 public class BankProject {
     private int accountNumber;
-    private d balance;
+    private double balance;
+    
 
         public BankProject() {
             Random random = new Random();
