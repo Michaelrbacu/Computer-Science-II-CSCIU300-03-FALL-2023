@@ -26,10 +26,7 @@ public class Player
 	jerseyNumber = scan.nextInt();
     }
 
-    //-----------------------------------------------------------
-    // Returns true if the given player is on the same team and has
-    // the same jersey number as this player
-    //-----------------------------------------------------------
+
     public boolean equals(Player p)
     {
 	return team.equals(p.team) && jerseyNumber == p.jerseyNumber;

@@ -7,9 +7,7 @@ private long acctNum;
 
 public static int numAccounts;
 
-private boolean isOpen = true;
-
- //----------------------------------------------
+//----------------------------------------------
  //Constructor -- initializes balance and owner; generates random
  //account number
  //----------------------------------------------
