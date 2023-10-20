@@ -32,4 +32,6 @@ public class Player
 	return team.equals(p.team) && jerseyNumber == p.jerseyNumber;
     }
 
+//team.equals(p.team) && jerseyNumber == p.jerseyNumber;
+
 }
