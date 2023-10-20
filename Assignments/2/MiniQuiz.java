@@ -1,22 +1,32 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+
+/**
+ *
+ * @author aic
+ */
 //********************************************************************
 //  MiniQuiz.java       Author: Lewis/Loftus
 //
 //  Demonstrates the use of a class that implements an interface.
-/*
-*/
 //********************************************************************
 
 import java.util.Scanner;
 
-public class MiniQuiz {
+public class MiniQuiz
+{
     //-----------------------------------------------------------------
-    //  Presents a short quiz and compares question complexity.
+    //  Presents a short quiz.
     //-----------------------------------------------------------------
-    public static void main(String[] args) {
+    public static void main(String[] args)
+    {
         Question q1, q2;
         String possible;
 
-        Scanner scan = new Scanner(System.in);
+        //Scanner scan = new Scanner(System.in);
 
         q1 = new Question("What is the capital of Jamaica?",
                 "Kingston");
@@ -26,29 +36,11 @@ public class MiniQuiz {
                 "I don't know and I don't care");
         q2.setComplexity(10);
 
-        System.out.print(q1.getQuestion());
-        System.out.println(" (Level: " + q1.getComplexity() + ")");
-        possible = scan.nextLine();
-        if (q1.answerCorrect(possible))
-            System.out.println("Correct");
+        if (q1.compareTo(q2)==0)
+            System.out.println("q1 is as difficult as q2");
+        else if (q1.compareTo(q2)>0)
+            System.out.println("q1 is more difficult than q2");  
         else
-            System.out.println("No, the answer is " + q1.getAnswer());
-
-        System.out.println();
-        System.out.print(q2.getQuestion());
-        System.out.println(" (Level: " + q2.getComplexity() + ")");
-        possible = scan.nextLine();
-        if (q2.answerCorrect(possible))
-            System.out.println("Correct");
-        else
-            System.out.println("No, the answer is " + q2.getAnswer());
-
-        int comparisonResult = q1.compareTo(q2);
-        if (comparisonResult == 0)
-            System.out.println("Both questions have the same complexity.");
-        else if (comparisonResult > 0)
-            System.out.println(q1.getQuestion() + " is more complex than " + q2.getQuestion());
-        else
-            System.out.println(q2.getQuestion() + " is more complex than " + q1.getQuestion());
+            System.out.println("q1 is easier than q2"); 
     }
 }

@@ -21,12 +21,10 @@ public class StudentBody
                 44132);
         Student marsha = new Student("Marsha", "Jones", mHome, school);
 
-
-        int numStudents = Student.getNumStudents();
-         
         System.out.println(john);
         System.out.println();
         System.out.println(marsha);
-        System.out.println("There are " + numStudents + " students.");
+	   System.out.println();
+        System.out.println("The number of students is "+Student.getNumStudents());
     }
 }

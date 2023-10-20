@@ -3,12 +3,6 @@
 //
 //  Represents a question (and its answer).
 //********************************************************************
-
-/*
- * Modify the attached Question class to make it override equals.
- * equals does comparison based on question and complexityLevel.
- * In other words, return true only if both question and complexityLevel are the same.
- */
 public class Question 
 {
     private String question, answer;
@@ -19,11 +13,9 @@ public class Question
     //-----------------------------------------------------------------
     public Question(String query, String result)
     {
-
         question = query;
         answer = result;
         complexityLevel = 1;
-        
     }
 
     //-----------------------------------------------------------------
@@ -34,32 +26,13 @@ public class Question
         complexityLevel = level;
     }
 
-    @Override
-    public boolean equals(Object obj)
-    {
-        if (this == obj)
-            return true;
-        if (obj == null || getClass() != obj.getClass())
-            return false;
-        Question other = (Question) obj;
-        return question.equals(other.question) && complexityLevel == other.complexityLevel;
-    }
-
-    //
-
-    
     //-----------------------------------------------------------------
     //  Returns the complexity level for this question.
     //-----------------------------------------------------------------
-    
     public int getComplexity()
     {
         return complexityLevel;
     }
-
-
-    
-
 
     //-----------------------------------------------------------------
     //  Returns the question.
@@ -91,9 +64,11 @@ public class Question
     public String toString()
     {
         return question + "\n" + answer;
-    } 
-
-
-
-}
+    }
     
+    public boolean equals(Question q)
+    {
+		return question.equals(q.question) && complexityLevel == q.complexityLevel;
+    }
+    
+}

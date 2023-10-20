@@ -1,99 +1,134 @@
+// ****************************************************************
+// Square.java
+//
+// Define a Square class with methods to create and read in
+// info for a square matrix and to compute the sum of a row,
+// a column, either diagonal, and whether it is magic.
+//          
+// ****************************************************************
+
 import java.util.Scanner;
 
-public class Square {
-    private int[][] square;
+public class Square
+{
 
-    // Create a new square of the given size
-    public Square(int size) {
-        square = new int[size][size];
+    int[][] square;
+
+    //--------------------------------------
+    //create new square of given size
+    //--------------------------------------
+    public Square(int size)
+    {
+	square = new int[size][size];
     }
 
-    // Return the sum of the values in the given row
-    public int sumRow(int row) {
-        int sum = 0;
-        for (int col = 0; col < square.length; col++) {
-            sum += square[row][col];
-        }
-        return sum;
+
+    //-----------------------------------------------
+    //return the sum of the values in the given row
+    //-----------------------------------------------
+    public int sumRow(int row)
+    {
+	int sum = 0;
+	for (int col = 0; col < square.length; col++)
+	    sum += square[row][col];
+
+	return sum;
     }
 
-    // Return the sum of the values in the given column
-    public int sumCol(int col) {
-        int sum = 0;
-        for (int row = 0; row < square.length; row++) {
-            sum += square[row][col];
-        }
-        return sum;
+
+    //-------------------------------------------------
+    //return the sum of the values in the given column
+    //-------------------------------------------------
+    public int sumCol(int col)
+    {
+	int sum = 0;
+	for (int row = 0; row < square.length; row++)
+	    sum += square[row][col];
+
+	return sum;
     }
 
-    // Return the sum of the values in the main diagonal
-    public int sumMainDiag() {
-        int sum = 0;
-        for (int i = 0; i < square.length; i++) {
-            sum += square[i][i];
-        }
-        return sum;
+    //---------------------------------------------------
+    //return the sum of the values in the main diagonal
+    //---------------------------------------------------
+    public int sumMainDiag()
+    {
+	int sum = 0;
+	for (int i = 0; i < square.length; i++)
+	    sum += square[i][i];
+
+	return sum;
     }
 
-    // Return the sum of the values in the other ("reverse") diagonal
-    public int sumOtherDiag() {
-        int sum = 0;
-        for (int i = 0; i < square.length; i++) {
-            sum += square[i][square.length - 1 - i];
-        }
-        return sum;
+    //---------------------------------------------------------------
+    //return the sum of the values in the other ("reverse") diagonal
+    //---------------------------------------------------------------
+    public int sumOtherDiag()
+    {
+	int sum  = 0;
+	int lastIndex = square.length - 1;
+
+	for (int i = 0; i < square.length; i++)
+	    sum += square[i][lastIndex-i];
+
+	return sum;
     }
 
-    // Return true if the square is magic (all rows, cols, and diags have
-    // the same sum), false otherwise
-    public boolean magic() {
-        int targetSum = sumRow(0); // The sum of the first row (the target sum)
+    //-------------------------------------------------------------------
+    //return true if the square is magic (all rows, cols, and diags have
+    //same sum), false otherwise
+    //-------------------------------------------------------------------
+    public boolean magic()
+    {
+	int checkSum = sumMainDiag();
+	boolean isMagic = sumOtherDiag() == checkSum;
 
-        // Check rows
-        for (int row = 1; row < square.length; row++) {
-            if (sumRow(row) != targetSum) {
-                return false;
-            }
-        }
+	// check rows
+	int row = 0;
+	while (row < square.length && isMagic)
+	    if (sumRow(row)!=checkSum)
+		isMagic = false;
+	    else
+		row++;
 
-        // Check columns
-        for (int col = 0; col < square.length; col++) {
-            if (sumCol(col) != targetSum) {
-                return false;
-            }
-        }
+	// check columns
+	int col = 0;
+	while (col < square.length && isMagic)
+	    if (sumCol(col) != checkSum)
+		isMagic = false;
+	    else
+		col++;
 
-        // Check main diagonal
-        if (sumMainDiag() != targetSum) {
-            return false;
-        }
-
-        // Check other diagonal
-        if (sumOtherDiag() != targetSum) {
-            return false;
-        }
-
-        // If all checks passed, it's a magic square
-        return true;
+	return isMagic;
     }
 
-    // Read info into the square from the input stream associated with the
-    // Scanner parameter
-    public void readSquare(Scanner scan) {
-        for (int row = 0; row < square.length; row++) {
-            for (int col = 0; col < square.length; col++) {
-                square[row][col] = scan.nextInt();
-            }
-        }
+    //----------------------------------------------------
+    //read info into the square from the standard input.
+    //----------------------------------------------------
+    public void readSquare(Scanner scan)
+    {
+	for (int row = 0; row < square.length; row++)
+	    for (int col = 0; col < square.length; col ++)
+		square[row][col] = scan.nextInt();
     }
 
-    // Print the contents of the square, neatly formatted
-    public void printSquare() {
-        for (int row = 0; row < square.length; row++) {
-            for (int col = 0; col < square.length; col++) {
-                System.out.print(square[row][col] + " ");
-            }
-            System.out.println();
-        }
+    //---------------------------------------------------
+    //print the contents of the square, neatly formatted
+    //---------------------------------------------------
+    public void printSquare()
+    {
+	for (int row = 0; row < square.length; row++)
+	    {
+		for (int col = 0; col < square.length; col++)
+		    System.out.print (square[row][col] + "\t");
+		System.out.println();
+	    }
     }
+
 }
+
+
+
+
+
+

@@ -6,9 +6,9 @@
 
 public class Student
 {
-    public static int numStudents;
     private String firstName, lastName;
     private Address homeAddress, schoolAddress;
+    private static int numofStudents = 0; //track the number of Students objects
 
     //-----------------------------------------------------------------
     //  Constructor: Sets up this student with the specified values.
@@ -20,7 +20,12 @@ public class Student
         lastName = last;
         homeAddress = home;
         schoolAddress = school;
-        numStudents++;
+	   numofStudents++; //increase by one when a new object is created
+    }
+//return the number of Students objects
+    public static int getNumStudents ()
+    {
+        return numofStudents; 
     }
 
     //-----------------------------------------------------------------
@@ -36,12 +41,4 @@ public class Student
 
         return result;
     }
-    public static int getNumStudents()
-    {
-    
-    return numStudents;
-    
-    }
-    
-    
 }
