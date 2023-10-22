@@ -66,9 +66,8 @@ public class Question
         return question + "\n" + answer;
     }
     
-    public boolean equals(Question q)
-    {
-		return question.equals(q.question) && complexityLevel == q.complexityLevel;
+
+    public boolean equals(Question q){
+        return question.equals(q.question) && complexityLevel == q.complexityLevel;
     }
-    
 }
