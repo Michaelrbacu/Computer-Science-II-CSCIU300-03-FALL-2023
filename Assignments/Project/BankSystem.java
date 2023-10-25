@@ -8,7 +8,5 @@ public class BankSystem {
         int baseAccountNumber = myExtended.getAccountNumber();
             myExtended.displayAccountNumber();
         }
-
-        //
         
 }
