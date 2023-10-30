@@ -10,4 +10,13 @@ public abstract class BusinessSaving extends BusinessAccount{
     {
         balance *= interestrate;
     }
+
+
+    public double fee(){
+        double fee = 10;
+        return fee;
+
+    }
+
+
 }
