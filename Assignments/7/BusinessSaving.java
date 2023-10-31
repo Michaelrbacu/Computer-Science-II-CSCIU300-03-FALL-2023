@@ -12,7 +12,13 @@ public abstract class BusinessSaving extends BusinessAccount{
     }
 
 
-    public double fee(){
+    public double Mfee(){
+        double fee = 20;
+        return fee;
+
+    }
+
+    public double Wfee(){
         double fee = 10;
         return fee;
 
