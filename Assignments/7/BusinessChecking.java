@@ -3,7 +3,7 @@ public abstract class BusinessChecking extends BusinessAccount{
     //constructor
     public BusinessChecking(String name, String address, String email, String phone)
     {
-        super(name, address, email, phone, amount); //call parent's constructor
+        super(name, address, email, phone); //call parent's constructor
     }
     
     public double Mfee(){
