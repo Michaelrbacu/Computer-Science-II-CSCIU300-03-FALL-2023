@@ -1,29 +1,25 @@
 public abstract class BusinessChecking extends BusinessAccount{
-    public final double monthlyfee = 20;
-    public double fee = 10;
-    public double nofee = 0;
-
+    public final double monthlyfee = 20; //monthly fee
+    //constructor
     public BusinessChecking(String name, String address, String email, String phone)
     {
-        super(name, address, email, phone); 
+        super(name, address, email, phone); //call parent's constructor
     }
     
     public double Mfee(){
-        return monthlyfee;
+        double fee = 20;
+        return fee;
 
     }
 
-    public double Withdrawlfee(double amount){
-        if(amount >= 10000){                
+        public double Wfee(){
+        
+            double fee = 20;
             return fee;
-        }
-        else {
-            return nofee;
-        }
-    }
-    
-    public double Interest(double amount){
-        return nofee;
+
+        
+
     }
 
 }
+

@@ -1,4 +1,3 @@
-
 public abstract class BusinessAccount extends BankAccount{
     public final double monthlyfee = 20; //monthly fee
     //constructor

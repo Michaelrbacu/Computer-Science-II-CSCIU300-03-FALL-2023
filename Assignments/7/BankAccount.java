@@ -1,4 +1,3 @@
-
 public abstract class BankAccount {
     //member variables to describe an account
     private String name;
