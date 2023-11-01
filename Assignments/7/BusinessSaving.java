@@ -1,5 +1,7 @@
 public abstract class BusinessSaving extends BusinessAccount{
     public final double interestrate = .025;
+    public double fee = 10;
+
     //constructor
     public BusinessSaving(String name, String address, String email, String phone)
     {
@@ -12,14 +14,8 @@ public abstract class BusinessSaving extends BusinessAccount{
     }
 
 
-    public double Mfee(){
-        double fee = 20;
-        return fee;
 
-    }
-
-    public double Wfee(){
-        double fee = 10;
+    public double Withdrawlfee(double amount){
         return fee;
 
     }
