@@ -1,19 +1,29 @@
 public abstract class BusinessChecking extends BusinessAccount{
-    
+    public double fee = 10;
+    public double fin = 0;
     public BusinessChecking(String name, String address, String email, String phone)
     {
         super(name, address, email, phone); //call parent's constructor
     }
-    
-        public double Withdrawlfee(double amount){
-            double fee = 10;
-            if (amount >= 10000) {
-                return fee;
-            }
-            return 0;
+
+        
+    @Override
+    public boolean withdraw(double amount){
+        if(amount>balance){
+            System.out.println("Insufficent funds");
+            return false;
+
+        }else if(amount >= 10000){
+            fin = amount + fee - balance;
+            balance = fin;
+            return true;
+        }else{
+            fin = amount-balance;
+            balance = fin;
+            return true;
         }
 
-
+    }
 
 }
 
