@@ -13,12 +13,4 @@ public abstract class BusinessSaving extends BusinessAccount{
         balance *= interestrate;
     }
 
-
-
-    public double Withdrawlfee(double amount){
-        return fee;
-
-    }
-
-
 }
