@@ -12,14 +12,21 @@ public abstract class BusinessChecking extends BusinessAccount{
 
     }
 
-        public double Wfee(){
+        public double Wfee(double amount){
         
-            double fee = 20;
+            if(amount >=10000){
+            double fee = 10;
             return fee;
 
+            }
+            else{            
+                return 0;
+            }
         
 
     }
+
+
 
 }
 
