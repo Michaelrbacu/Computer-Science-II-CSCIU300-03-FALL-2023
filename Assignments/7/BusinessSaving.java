@@ -16,7 +16,7 @@ public class BusinessSaving extends BusinessAccount{
             return false;
 
         }else{
-            fin = amount + fee - balance;
+            fin = balance - (amount+fee);
             balance = fin;
             return true;
         }
