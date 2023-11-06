@@ -8,6 +8,54 @@ public IntegerList(int size)
 {
 list = new int[size];
 }
+
+public void replaceFirst(int oldVal, int newVal) {
+    int index = search(oldVal);
+    if (index != -1) {
+        list[index] = newVal;
+    }
+}
+
+public void replaceAll(int oldVal, int newVal) {
+    for (int i = 0; i < list.length; i++) {
+        if (list[i] == oldVal) {
+            list[i] = newVal;
+        }
+    }
+}
+
+public void sortDecreasing() {
+    int maxIndex;
+    for (int i = 0; i < list.length - 1; i++) {
+        maxIndex = i;
+        for (int j = i + 1; j < list.length; j++) {
+            if (list[j] > list[maxIndex]) {
+                maxIndex = j;
+            }
+        }
+        int temp = list[i];
+        list[i] = list[maxIndex];
+        list[maxIndex] = temp;
+    }
+}
+
+public int binarySearchD(int target) {
+    int low = 0;
+    int high = list.length - 1;
+    while (low <= high) {
+        int mid = (low + high) / 2;
+        if (list[mid] == target) {
+            return mid;
+        } else if (list[mid] < target) {
+            high = mid - 1;
+        } else {
+            low = mid + 1;
+        }
+    }
+    return -1;
+}
+
+
 //-------------------------------------------------------
 //fill array with integers between 1 and 100, inclusive
 //-------------------------------------------------------
