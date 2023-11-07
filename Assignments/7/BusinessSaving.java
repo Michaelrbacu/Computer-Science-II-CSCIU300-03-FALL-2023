@@ -1,4 +1,4 @@
-public abstract class BusinessSaving extends BusinessAccount{
+public class BusinessSaving extends BusinessAccount{
     public double fee = 10;
     public double fin = 0;
     public double interestrate = .025;
@@ -12,12 +12,12 @@ public abstract class BusinessSaving extends BusinessAccount{
 
     @Override
     public boolean withdraw(double amount){
-        if(amount+fee>balance){
+        if((amount+fee)>balance){
             System.out.println("Insufficent funds");
             return false;
 
         }else{
-            fin = balance - (amount + fee);
+            fin = balance - (amount+fee);
             balance = fin;
             return true;
         }
