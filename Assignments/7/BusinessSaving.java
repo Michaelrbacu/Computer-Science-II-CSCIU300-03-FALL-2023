@@ -1,6 +1,7 @@
 public class BusinessSaving extends BusinessAccount{
     public double fee = 10;
     public double fin = 0;
+    public double interestrate = .025;
     //constructor
     public BusinessSaving(String name, String address, String email, String phone, double interestrate)
     {

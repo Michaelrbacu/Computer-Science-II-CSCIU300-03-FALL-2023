@@ -14,7 +14,7 @@ public class BusinessChecking extends BusinessAccount{
             return false;
 
         }else if(amount >= 10000){
-            fin = balance - (amount+fee);
+            fin = balance - (amount + fee);
             balance = fin;
             return true;
         }else{
@@ -26,4 +26,5 @@ public class BusinessChecking extends BusinessAccount{
     }
 
 }
+
 
