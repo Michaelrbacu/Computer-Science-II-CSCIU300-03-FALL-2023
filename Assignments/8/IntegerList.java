@@ -16,6 +16,7 @@ public void replaceFirst(int oldVal, int newVal) {
     }
 }
 
+
 public void replaceAll(int oldVal, int newVal) {
     for (int i = 0; i < list.length; i++) {
         if (list[i] == oldVal) {
