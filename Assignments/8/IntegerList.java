@@ -57,6 +57,7 @@ public int binarySearchD(int target) {
 }
 
 
+
 //-------------------------------------------------------
 //fill array with integers between 1 and 100, inclusive
 //-------------------------------------------------------
