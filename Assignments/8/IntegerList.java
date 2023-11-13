@@ -54,6 +54,7 @@ public class IntegerList {
         return -1;
     }
 
+
     // -------------------------------------------------------
     // fill array with integers between 1 and 100, inclusive
     // -------------------------------------------------------
