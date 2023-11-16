@@ -18,4 +18,5 @@ public class ParseInts {
 
         System.out.println("The sum of the integers on this line is " + sum);
     }
+    
 }
