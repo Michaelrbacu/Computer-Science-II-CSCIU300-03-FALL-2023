@@ -1,9 +1,4 @@
-package book.Magazine;
-//*******************************************************************
-//  MagazineList.java       Author: Lewis/Loftus
-//
-//  Represents a collection of magazines.
-//*******************************************************************
+package Chap13.Magazine;
 
 public class MagazineList
 {

@@ -1,18 +1,11 @@
-package book.Magazine;
-//*******************************************************************
-//  MagazineRack.java       Author: Lewis/Loftus
-//
-//  Driver to exercise the MagazineList collection.
-//*******************************************************************
+package Chap13.Magazine;
 
-public class MagazineRack
-{
-    //----------------------------------------------------------------
-    //  Creates a MagazineList object, adds several magazines to the
-    //  list, then prints it.
-    //----------------------------------------------------------------
-    public static void main(String[] args)
-    {    
+public class MagazineRack {
+    // ----------------------------------------------------------------
+    // Creates a MagazineList object, adds several magazines to the
+    // list, then prints it.
+    // ----------------------------------------------------------------
+    public static void main(String[] args) {
         MagazineList rack = new MagazineList();
 
         rack.add(new Magazine("Time"));
@@ -21,6 +14,6 @@ public class MagazineRack
         rack.add(new Magazine("House and Garden"));
         rack.add(new Magazine("GQ"));
 
-        System.out.println(rack); 
+        System.out.println(rack);
     }
 }

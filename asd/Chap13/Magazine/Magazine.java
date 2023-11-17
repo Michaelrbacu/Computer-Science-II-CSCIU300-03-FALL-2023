@@ -1,9 +1,4 @@
-package book.Magazine;
-//********************************************************************
-//  Magazine.java       Author: Lewis/Loftus
-//
-//  Represents a single magazine.
-//********************************************************************
+package Chap13.Magazine;
 
 public class Magazine 
 {

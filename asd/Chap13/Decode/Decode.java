@@ -1,8 +1,4 @@
-//********************************************************************
-//  Decode.java       Author: Lewis/Loftus
-//
-//  Demonstrates the use of the Stack class.
-//********************************************************************
+package Chap13.Decode;
 
 import java.util.*;
 
