@@ -4,36 +4,33 @@
 //  Represents a college student.
 //********************************************************************
 
-public class Student
-{
+public class Student {
     private String firstName, lastName;
     private Address homeAddress, schoolAddress;
-    private static int numofStudents = 0; //track the number of Students objects
+    private static int numofStudents = 0; // track the number of Students objects
 
-    //-----------------------------------------------------------------
-    //  Constructor: Sets up this student with the specified values.
-    //-----------------------------------------------------------------
+    // -----------------------------------------------------------------
+    // Constructor: Sets up this student with the specified values.
+    // -----------------------------------------------------------------
     public Student(String first, String last, Address home,
-            Address school)
-    {
+            Address school) {
         firstName = first;
         lastName = last;
         homeAddress = home;
         schoolAddress = school;
-	   numofStudents++; //increase by one when a new object is created
-    }
-//return the number of Students objects
-    public static int getNumStudents ()
-    {
-        return numofStudents; 
+        numofStudents++; // increase by one when a new object is created
     }
 
-    //-----------------------------------------------------------------
-    //  Returns a string description of this Student object.
-    //-----------------------------------------------------------------
-    
-    public String toString()
-    {
+    // return the number of Students objects
+    public static int getNumStudents() {
+        return numofStudents;
+    }
+
+    // -----------------------------------------------------------------
+    // Returns a string description of this Student object.
+    // -----------------------------------------------------------------
+
+    public String toString() {
         String result;
 
         result = firstName + " " + lastName + "\n";
