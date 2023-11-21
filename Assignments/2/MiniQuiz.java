@@ -16,17 +16,15 @@
 
 import java.util.Scanner;
 
-public class MiniQuiz
-{
-    //-----------------------------------------------------------------
-    //  Presents a short quiz.
-    //-----------------------------------------------------------------
-    public static void main(String[] args)
-    {
+public class MiniQuiz {
+    // -----------------------------------------------------------------
+    // Presents a short quiz.
+    // -----------------------------------------------------------------
+    public static void main(String[] args) {
         Question q1, q2;
         String possible;
 
-        //Scanner scan = new Scanner(System.in);
+        // Scanner scan = new Scanner(System.in);
 
         q1 = new Question("What is the capital of Jamaica?",
                 "Kingston");
@@ -36,11 +34,11 @@ public class MiniQuiz
                 "I don't know and I don't care");
         q2.setComplexity(10);
 
-        if (q1.compareTo(q2)==0)
+        if (q1.compareTo(q2) == 0)
             System.out.println("q1 is as difficult as q2");
-        else if (q1.compareTo(q2)>0)
-            System.out.println("q1 is more difficult than q2");  
+        else if (q1.compareTo(q2) > 0)
+            System.out.println("q1 is more difficult than q2");
         else
-            System.out.println("q1 is easier than q2"); 
+            System.out.println("q1 is easier than q2");
     }
 }
