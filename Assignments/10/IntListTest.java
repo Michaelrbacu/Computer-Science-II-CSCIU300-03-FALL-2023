@@ -1,9 +1,3 @@
-
-// ***************************************************************
-// IntListTest.java
-//
-// Driver to test IntList methods.
-// ***************************************************************
 import java.util.Scanner;
 
 public class IntListTest {
@@ -53,7 +47,8 @@ case 4: //print
 list.print();
 break;
 default:
-System.out.println("Sorry, invalid choice")
+
+System.out.println("Sorry, invalid choice");
  }
 }
 
