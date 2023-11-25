@@ -1,4 +1,7 @@
-
+/*
+ * A Linked Queue Implementation
+ * Matching Parentheses
+ */
 public class IntList {
     private IntNode front; // first node in list
     // -----------------------------------------
