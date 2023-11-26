@@ -1,9 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
  *
  * @author aic
@@ -33,12 +27,14 @@ public class MiniQuiz {
         q2 = new Question("Which is worse, ignorance or apathy?",
                 "I don't know and I don't care");
         q2.setComplexity(10);
-
+/*
+ 
+ 
         if (q1.compareTo(q2) == 0)
             System.out.println("q1 is as difficult as q2");
         else if (q1.compareTo(q2) > 0)
             System.out.println("q1 is more difficult than q2");
         else
-            System.out.println("q1 is easier than q2");
+            System.out.println("q1 is easier than q2");*/
     }
 }
