@@ -21,7 +21,7 @@ public class ParenMatch {
                 } else {
                     
                     if (s.isEmpty()) {
-                        System.out.println("Error: Extra right parenthesis at position " + i);
+                        System.out.println("Error: Extra right parenthesis at position " + (i+1));
                         System.out.println(line.substring(0, i + 1));
                         return;
                     } else {
