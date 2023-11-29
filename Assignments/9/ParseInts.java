@@ -20,6 +20,7 @@ public class ParseInts
 		    }
 		catch (NumberFormatException exception)
 		    {
+				// If the next token is not an integer, catch the exception and continue the loop
 		    }
 
 	    }
