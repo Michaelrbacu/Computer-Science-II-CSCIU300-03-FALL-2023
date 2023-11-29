@@ -41,7 +41,7 @@ public class LinkedQueue implements QueueADT {
         front = front.getNext();
         numElements--;
         if (isEmpty()) {
-            back = null; // Queue is now empty, reset back to null
+            back = null;
         }
         return item;
     }
