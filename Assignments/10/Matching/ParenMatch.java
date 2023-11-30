@@ -1,3 +1,4 @@
+package Matching;
 import java.util.*;
 
 public class ParenMatch {
@@ -8,8 +9,8 @@ public class ParenMatch {
         System.out.println("\nParenthesis Matching");
         System.out.print("Enter a parenthesized expression: ");
         line = scan.nextLine();
-        
-        
+
+
         for (int i = 0; i < line.length(); i++) {
             char currentChar = line.charAt(i);
 
