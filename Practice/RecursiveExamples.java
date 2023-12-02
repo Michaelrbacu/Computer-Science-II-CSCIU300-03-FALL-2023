@@ -17,6 +17,12 @@ public class RecursiveExamples {
         int[] array = {1, 2, 3, 4, 5};
         int sum = sumArray(array, 0);
         System.out.println("Sum of the array elements: " + sum);
+
+        // Power of a Number Example
+        int base = 2;
+        int exponent = 3;
+        int powerResult = power(base, exponent);
+        System.out.println(base + " raised to the power of " + exponent + " is: " + powerResult);
     }
 
     // Factorial Function
@@ -43,6 +49,15 @@ public class RecursiveExamples {
             return arr[index];
         } else {
             return arr[index] + sumArray(arr, index + 1);
+        }
+    }
+
+    // Power of a Number Function
+    static int power(int base, int exponent) {
+        if (exponent == 0) {
+            return 1;
+        } else {
+            return base * power(base, exponent - 1);
         }
     }
 }
