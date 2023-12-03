@@ -57,9 +57,9 @@ public class ExceptionExample {
         }
 
     }
-
+        //IO Exception
     private static void readFile(String filename) throws IOException {
-        // Example of throwing and propagating an IOException
+    
         BufferedReader br = null;
         try {
             br = new BufferedReader(new FileReader(filename));
