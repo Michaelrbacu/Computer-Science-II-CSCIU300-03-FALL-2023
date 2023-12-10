@@ -1,3 +1,4 @@
+
 // ******************************************************************
 //   Backwards.java
 //
@@ -5,37 +6,32 @@
 // ******************************************************************
 import java.util.Scanner;
 
-public class Backwards
-{
+public class Backwards {
 
-    //--------------------------------------------------------------
-    // Reads a string from the user and prints it backwards.
-    //--------------------------------------------------------------
-    public static void main(String[] args)
-    {
-	String msg;
-	Scanner scan  = new Scanner (System.in);
+	// --------------------------------------------------------------
+	// Reads a string from the user and prints it backwards.
+	// --------------------------------------------------------------
+	public static void main(String[] args) {
+		String msg;
+		Scanner scan = new Scanner(System.in);
 
-	System.out.print("Enter a string: ");
-	msg = scan.nextLine();
-	System.out.print("\nThe string backwards: ");
-	printBackwards(msg);
-	System.out.println();
+		System.out.print("Enter a string: ");
+		msg = scan.nextLine();
+		System.out.print("\nThe string backwards: ");
+		printBackwards(msg);
+		System.out.println();
 
-    }
-	
-	
-    //--------------------------------------------------------------
-    // Takes a string and recursively prints it backwards.
-    //--------------------------------------------------------------
-    public static void printBackwards(String s)
-    {
-	if (s.length() != 0)
-	    {
-		int lastIndex = s.length()-1;
-		System.out.print(s.charAt(lastIndex));
-		printBackwards(s.substring(0,lastIndex));
-	    }
-    }
+	}
+
+	// --------------------------------------------------------------
+	// Takes a string and recursively prints it backwards.
+	// --------------------------------------------------------------
+	public static void printBackwards(String s) {
+		if (s.length() != 0) {
+			int lastIndex = s.length() - 1;
+			System.out.print(s.charAt(lastIndex));
+			printBackwards(s.substring(0, lastIndex));
+		}
+	}
 
 }

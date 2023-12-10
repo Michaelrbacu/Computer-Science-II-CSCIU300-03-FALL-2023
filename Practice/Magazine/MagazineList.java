@@ -1,30 +1,26 @@
 package Chap13.Magazine;
 
-public class MagazineList
-{
+public class MagazineList {
     private MagazineNode list;
 
-    //----------------------------------------------------------------
-    //  Sets up an initially empty list of magazines.
-    //----------------------------------------------------------------
-    public MagazineList()
-    {
+    // ----------------------------------------------------------------
+    // Sets up an initially empty list of magazines.
+    // ----------------------------------------------------------------
+    public MagazineList() {
         list = null;
     }
 
-    //----------------------------------------------------------------
-    //  Creates a new MagazineNode object and adds it to the end of
-    //  the linked list.
-    //----------------------------------------------------------------
-    public void add(Magazine mag)
-    {
+    // ----------------------------------------------------------------
+    // Creates a new MagazineNode object and adds it to the end of
+    // the linked list.
+    // ----------------------------------------------------------------
+    public void add(Magazine mag) {
         MagazineNode node = new MagazineNode(mag);
         MagazineNode current;
 
         if (list == null)
             list = node;
-        else
-        {
+        else {
             current = list;
             while (current.next != null)
                 current = current.next;
@@ -32,17 +28,15 @@ public class MagazineList
         }
     }
 
-    //----------------------------------------------------------------
-    //  Returns this list of magazines as a string.
-    //----------------------------------------------------------------
-    public String toString()
-    {
+    // ----------------------------------------------------------------
+    // Returns this list of magazines as a string.
+    // ----------------------------------------------------------------
+    public String toString() {
         String result = "";
 
         MagazineNode current = list;
 
-        while (current != null)
-        {
+        while (current != null) {
             result += current.magazine + "\n";
             current = current.next;
         }
@@ -50,20 +44,18 @@ public class MagazineList
         return result;
     }
 
-    //*****************************************************************
-    //  An inner class that represents a node in the magazine list.
-    //  The public variables are accessed by the MagazineList class.
-    //*****************************************************************
-    private class MagazineNode
-    {
+    // *****************************************************************
+    // An inner class that represents a node in the magazine list.
+    // The public variables are accessed by the MagazineList class.
+    // *****************************************************************
+    private class MagazineNode {
         public Magazine magazine;
         public MagazineNode next;
 
-        //--------------------------------------------------------------
-        //  Sets up the node
-        //--------------------------------------------------------------
-        public MagazineNode(Magazine mag)
-        {
+        // --------------------------------------------------------------
+        // Sets up the node
+        // --------------------------------------------------------------
+        public MagazineNode(Magazine mag) {
             magazine = mag;
             next = null;
         }
