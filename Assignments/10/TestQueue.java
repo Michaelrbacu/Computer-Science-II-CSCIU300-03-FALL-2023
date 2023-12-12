@@ -1,6 +1,6 @@
 public class TestQueue {
     public static void main(String[] args) {
-        
+
         QueueADT q = new LinkedQueue();
 
         System.out.println("\nEnqueuing chocolate, cake, pie, truffles:");
