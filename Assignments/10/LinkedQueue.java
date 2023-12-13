@@ -24,12 +24,12 @@ public class LinkedQueue implements QueueADT {
     public void enqueue(Object item) {
         Node newNode = new Node(item);
         numElements++;
-            if(back == null){
-                front = newNode;
-            }else{
-                back.setNext(newNode);
-            }
-            back = newNode;
+        if (back == null) {
+            front = newNode;
+        } else {
+            back.setNext(newNode);
+        }
+        back = newNode;
     }
 
     // -------------------------------------------------------
@@ -37,11 +37,12 @@ public class LinkedQueue implements QueueADT {
     // -------------------------------------------------------
     public Object dequeue() {
         Object item = null;
-        if (!isEmpty()) {
+        if(!isEmpty()){
             item = front.getElement();
             front = front.getNext();
-            if (front == null)
+            if(front == null){
                 back = null;
+            }
             numElements--;
         }
         return item;
