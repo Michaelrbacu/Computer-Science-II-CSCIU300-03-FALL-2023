@@ -38,21 +38,32 @@ public class IntegerList {
         }
     }
 
-    public int binarySearchD(int target) {
-        int low = 0;
-        int high = list.length - 1;
-        while (low <= high) {
-            int mid = (low + high) / 2;
-            if (list[mid] == target) {
-                return mid;
-            } else if (list[mid] < target) {
-                high = mid - 1;
-            } else {
-                low = mid + 1;
-            }
-        }
-        return -1;
+    public int binarySearchD(int target)
+    {
+	int min = 0;
+	int max = list.length-1;
+	int mid = 0;
+	boolean found = false;
+
+	while (!found && min <= max)
+	    {
+		mid = (min + max) / 2;
+
+		if (list[mid] == target)
+		    found = true;
+		else
+		    if (target > list[mid])
+    			max = mid - 1;
+		    else
+			min = mid + 1;
+	    }
+
+	if (found)
+	    return mid;
+	else
+	    return -1;
     }
+
 
     // -------------------------------------------------------
     // fill array with integers between 1 and 100, inclusive

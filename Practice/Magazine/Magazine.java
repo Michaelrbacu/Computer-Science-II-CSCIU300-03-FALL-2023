@@ -1,4 +1,4 @@
-package Chap13.Magazine;
+package Magazine;
 
 public class Magazine {
     private String title;
