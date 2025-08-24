@@ -1,7 +1,66 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
+
+  <category>
+    <pattern>HELLO</pattern>
+    <template>
+      Hello! I am your career advisor chatbot. I can help you explore computer science job options based on your strengths and preferences. 
+      Would you like to begin?
+    </template>
+  </category>
+
+  <category>
+    <pattern>YES</pattern>
+    <template>
+      Great. Tell me, do you prefer working with: 
+      1 SOFTWARE DEVELOPMENT, 
+      2 DATA AND ANALYSIS, 
+      3 NETWORKS AND SYSTEMS, 
+      4 SECURITY, or 
+      5 RESEARCH AND AI?
+    </template>
+  </category>
+
+  <category>
+    <pattern>SOFTWARE DEVELOPMENT</pattern>
+    <template>
+      Software Developer is a strong career path for you. Developers design, build, and test applications. Employers seek problem solving, coding, and teamwork skills.
+    </template>
+  </category>
+
+  <category>
+    <pattern>DATA AND ANALYSIS</pattern>
+    <template>
+      Data Analyst could be a great fit. Analysts work with large datasets to find insights. Skills in statistics, SQL, and visualization are valuable.
+    </template>
+  </category>
+
+  <category>
+    <pattern>NETWORKS AND SYSTEMS</pattern>
+    <template>
+      Network Administrator is an option for you. This role involves managing computer networks, ensuring connectivity, and troubleshooting performance issues.
+    </template>
+  </category>
+
+  <category>
+    <pattern>SECURITY</pattern>
+    <template>
+      Cybersecurity Specialist is an excellent career path. Specialists defend systems against cyber threats and require knowledge of security protocols and risk management.
+    </template>
+  </category>
+
+  <category>
+    <pattern>RESEARCH AND AI</pattern>
+    <template>
+      AI Research Assistant might interest you. This involves developing algorithms, exploring machine learning models, and contributing to innovative AI solutions.
+    </template>
+  </category>
+
   <category>
     <pattern>*</pattern>
-    <template>I have no answer for that.</template>
+    <template>
+      I did not understand. Please choose from: SOFTWARE DEVELOPMENT, DATA AND ANALYSIS, NETWORKS AND SYSTEMS, SECURITY, or RESEARCH AND AI.
+    </template>
   </category>
+
 </aiml>
