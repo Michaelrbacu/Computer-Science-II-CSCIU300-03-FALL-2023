@@ -1,65 +1,130 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <aiml>
 
+  <!-- Greeting -->
   <category>
     <pattern>HELLO</pattern>
     <template>
-      Hello! I am your career advisor chatbot. I can help you explore computer science job options based on your strengths and preferences. 
-      Would you like to begin?
+      Hello! I am your career advisor chatbot. I will ask you a few questions to recommend a career in computer science. 
+      First, do you prefer TEAMWORK or INDEPENDENT WORK?
+    </template>
+  </category>
+
+  <!-- Q1: Work style -->
+  <category>
+    <pattern>TEAMWORK</pattern>
+    <template>
+      <think><set name="workstyle">teamwork</set></think>
+      Great. Next question: Which area interests you most: APPLICATIONS, DATA, SECURITY, AI, or NETWORKS?
     </template>
   </category>
 
   <category>
-    <pattern>YES</pattern>
+    <pattern>INDEPENDENT WORK</pattern>
     <template>
-      Great. Tell me, do you prefer working with: 
-      1 SOFTWARE DEVELOPMENT, 
-      2 DATA AND ANALYSIS, 
-      3 NETWORKS AND SYSTEMS, 
-      4 SECURITY, or 
-      5 RESEARCH AND AI?
+      <think><set name="workstyle">independent</set></think>
+      Good to know. Next question: Which area interests you most: APPLICATIONS, DATA, SECURITY, AI, or NETWORKS?
+    </template>
+  </category>
+
+  <!-- Q2: Interest area -->
+  <category>
+    <pattern>APPLICATIONS</pattern>
+    <template>
+      <think><set name="interest">applications</set></think>
+      Nice choice. What would you say is your strength: CODING, ANALYSIS, TROUBLESHOOTING, or RESEARCH?
     </template>
   </category>
 
   <category>
-    <pattern>SOFTWARE DEVELOPMENT</pattern>
+    <pattern>DATA</pattern>
     <template>
-      Software Developer is a strong career path for you. Developers design, build, and test applications. Employers seek problem solving, coding, and teamwork skills.
-    </template>
-  </category>
-
-  <category>
-    <pattern>DATA AND ANALYSIS</pattern>
-    <template>
-      Data Analyst could be a great fit. Analysts work with large datasets to find insights. Skills in statistics, SQL, and visualization are valuable.
-    </template>
-  </category>
-
-  <category>
-    <pattern>NETWORKS AND SYSTEMS</pattern>
-    <template>
-      Network Administrator is an option for you. This role involves managing computer networks, ensuring connectivity, and troubleshooting performance issues.
+      <think><set name="interest">data</set></think>
+      Excellent. What would you say is your strength: CODING, ANALYSIS, TROUBLESHOOTING, or RESEARCH?
     </template>
   </category>
 
   <category>
     <pattern>SECURITY</pattern>
     <template>
-      Cybersecurity Specialist is an excellent career path. Specialists defend systems against cyber threats and require knowledge of security protocols and risk management.
+      <think><set name="interest">security</set></think>
+      Interesting. What would you say is your strength: CODING, ANALYSIS, TROUBLESHOOTING, or RESEARCH?
     </template>
   </category>
 
   <category>
-    <pattern>RESEARCH AND AI</pattern>
+    <pattern>AI</pattern>
     <template>
-      AI Research Assistant might interest you. This involves developing algorithms, exploring machine learning models, and contributing to innovative AI solutions.
+      <think><set name="interest">ai</set></think>
+      Exciting field. What would you say is your strength: CODING, ANALYSIS, TROUBLESHOOTING, or RESEARCH?
     </template>
   </category>
 
+  <category>
+    <pattern>NETWORKS</pattern>
+    <template>
+      <think><set name="interest">networks</set></think>
+      Good. What would you say is your strength: CODING, ANALYSIS, TROUBLESHOOTING, or RESEARCH?
+    </template>
+  </category>
+
+  <!-- Q3: Strength -->
+  <category>
+    <pattern>CODING</pattern>
+    <template>
+      <think><set name="strength">coding</set></think>
+      Thanks! Let me recommend a career... <srai>RECOMMENDATION</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>ANALYSIS</pattern>
+    <template>
+      <think><set name="strength">analysis</set></think>
+      Thanks! Let me recommend a career... <srai>RECOMMENDATION</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>TROUBLESHOOTING</pattern>
+    <template>
+      <think><set name="strength">troubleshooting</set></think>
+      Thanks! Let me recommend a career... <srai>RECOMMENDATION</srai>
+    </template>
+  </category>
+
+  <category>
+    <pattern>RESEARCH</pattern>
+    <template>
+      <think><set name="strength">research</set></think>
+      Thanks! Let me recommend a career... <srai>RECOMMENDATION</srai>
+    </template>
+  </category>
+
+  <!-- Final recommendation -->
+  <category>
+    <pattern>RECOMMENDATION</pattern>
+    <template>
+      Based on your answers (Workstyle: <get name="workstyle"/>, Interest: <get name="interest"/>, Strength: <get name="strength"/>), 
+      I recommend the following career path: 
+      <think>
+        <condition name="interest">
+          <li value="applications">Software Developer</li>
+          <li value="data">Data Analyst</li>
+          <li value="security">Cybersecurity Specialist</li>
+          <li value="ai">AI Research Assistant</li>
+          <li value="networks">Network Administrator</li>
+          <li>General Software Engineer</li>
+        </condition>
+      </think>
+    </template>
+  </category>
+
+  <!-- Catch-all -->
   <category>
     <pattern>*</pattern>
     <template>
-      I did not understand. Please choose from: SOFTWARE DEVELOPMENT, DATA AND ANALYSIS, NETWORKS AND SYSTEMS, SECURITY, or RESEARCH AND AI.
+      I did not understand. Please respond with one of the options I gave you.
     </template>
   </category>
 
