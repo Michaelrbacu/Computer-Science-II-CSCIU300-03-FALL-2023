@@ -101,24 +101,62 @@
     </template>
   </category>
 
-  <!-- Final recommendation -->
-  <category>
-    <pattern>RECOMMENDATION</pattern>
-    <template>
-      Based on your answers (Workstyle: <get name="workstyle"/>, Interest: <get name="interest"/>, Strength: <get name="strength"/>), 
-      I recommend the following career path: 
-      <think>
-        <condition name="interest">
-          <li value="applications">Software Developer</li>
-          <li value="data">Data Analyst</li>
-          <li value="security">Cybersecurity Specialist</li>
-          <li value="ai">AI Research Assistant</li>
-          <li value="networks">Network Administrator</li>
-          <li>General Software Engineer</li>
+<!-- Final recommendation using workstyle + interest + strength -->
+<category>
+  <pattern>RECOMMENDATION</pattern>
+  <template>
+    Based on your answers (Workstyle: <get name="workstyle"/>, Interest: <get name="interest"/>, Strength: <get name="strength"/>), 
+    I recommend the following career path:
+
+    <condition name="interest">
+      <li value="applications">
+        <condition name="strength">
+          <li value="coding">
+            <condition name="workstyle">
+              <li value="teamwork">Full-Stack Developer (collaborative projects)</li>
+              <li value="independent">Mobile App Developer (independent coding)</li>
+            </condition>
+          </li>
+          <li value="troubleshooting">
+            <condition name="workstyle">
+              <li value="teamwork">Software Support Engineer (collaborative troubleshooting)</li>
+              <li value="independent">DevOps Engineer (independent problem-solving)</li>
+            </condition>
+          </li>
         </condition>
-      </think>
-    </template>
-  </category>
+      </li>
+
+      <li value="data">
+        <condition name="strength">
+          <li value="analysis">Data Analyst</li>
+          <li value="coding">Data Engineer</li>
+          <li value="research">Machine Learning Engineer</li>
+        </condition>
+      </li>
+
+      <li value="security">
+        <condition name="strength">
+          <li value="troubleshooting">Cybersecurity Analyst</li>
+          <li value="research">Security Researcher</li>
+        </condition>
+      </li>
+
+      <li value="ai">
+        <condition name="strength">
+          <li value="research">AI Research Scientist</li>
+          <li value="coding">Machine Learning Engineer</li>
+        </condition>
+      </li>
+
+      <li value="networks">
+        <condition name="strength">
+          <li value="troubleshooting">Network Administrator</li>
+          <li value="analysis">Systems Analyst</li>
+        </condition>
+      </li>
+    </condition>
+  </template>
+</category>
 
   <!-- Catch-all -->
   <category>
