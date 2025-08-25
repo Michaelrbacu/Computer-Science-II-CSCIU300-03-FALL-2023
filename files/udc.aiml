@@ -101,7 +101,7 @@
     </template>
   </category>
 
-<!-- Final recommendation using workstyle + interest + strength -->
+  <!-- Final recommendation using 5 broad job categories -->
 <category>
   <pattern>RECOMMENDATION</pattern>
   <template>
@@ -113,14 +113,14 @@
         <condition name="strength">
           <li value="coding">
             <condition name="workstyle">
-              <li value="teamwork">Full-Stack Developer (collaborative projects)</li>
-              <li value="independent">Mobile App Developer (independent coding)</li>
+              <li value="teamwork">Applications Engineer – Full-Stack Developer focus (collaborative projects)</li>
+              <li value="independent">Applications Engineer – Mobile App Developer focus (independent coding)</li>
             </condition>
           </li>
           <li value="troubleshooting">
             <condition name="workstyle">
-              <li value="teamwork">Software Support Engineer (collaborative troubleshooting)</li>
-              <li value="independent">DevOps Engineer (independent problem-solving)</li>
+              <li value="teamwork">Applications Engineer – Software Support focus (collaborative troubleshooting)</li>
+              <li value="independent">Applications Engineer – DevOps focus (independent problem-solving)</li>
             </condition>
           </li>
         </condition>
@@ -128,30 +128,30 @@
 
       <li value="data">
         <condition name="strength">
-          <li value="analysis">Data Analyst</li>
-          <li value="coding">Data Engineer</li>
-          <li value="research">Machine Learning Engineer</li>
-        </condition>
-      </li>
-
-      <li value="security">
-        <condition name="strength">
-          <li value="troubleshooting">Cybersecurity Analyst</li>
-          <li value="research">Security Researcher</li>
+          <li value="analysis">Data Specialist – Data Analyst focus</li>
+          <li value="coding">Data Specialist – Data Engineer focus</li>
+          <li value="research">Data Specialist – Machine Learning Engineer focus</li>
         </condition>
       </li>
 
       <li value="ai">
         <condition name="strength">
-          <li value="research">AI Research Scientist</li>
-          <li value="coding">Machine Learning Engineer</li>
+          <li value="coding">AI/ML Engineer – Machine Learning Engineer focus</li>
+          <li value="research">AI/ML Engineer – AI Research Scientist focus</li>
+        </condition>
+      </li>
+
+      <li value="security">
+        <condition name="strength">
+          <li value="troubleshooting">Security Specialist – Cybersecurity Analyst focus</li>
+          <li value="research">Security Specialist – Security Researcher focus</li>
         </condition>
       </li>
 
       <li value="networks">
         <condition name="strength">
-          <li value="troubleshooting">Network Administrator</li>
-          <li value="analysis">Systems Analyst</li>
+          <li value="analysis">Network/Systems Analyst – Systems Analyst focus</li>
+          <li value="troubleshooting">Network/Systems Analyst – Network Administrator focus</li>
         </condition>
       </li>
     </condition>
